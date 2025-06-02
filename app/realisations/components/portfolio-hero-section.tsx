@@ -2,7 +2,7 @@
 
 export default function PortfolioHeroSection() {
   return (
-    <section className="relative bg-gray-800 text-white py-12 md:py-16 lg:py-20">
+    <section id="gallery" className="relative bg-gray-800 text-white py-12 md:py-16 lg:py-20">
       {/* Optionnel: Image de fond avec superposition */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"

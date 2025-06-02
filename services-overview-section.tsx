@@ -10,19 +10,19 @@ const services = [
     icon: <MonitorPlay className="h-10 w-10 text-amber-600 mb-4" />,
     title: "Sites Vitrines Impactants",
     description: "Renforcez votre crédibilité et captez de nouveaux clients.",
-    href: "/services/sites-vitrines",
+    href: "/realisations?category=Site+Vitrine#gallery",
   },
   {
     icon: <ShoppingCart className="h-10 w-10 text-amber-600 mb-4" />,
     title: "E-commerce Performant",
     description: "Ouvrez les portes du commerce en ligne avec une boutique optimisée.",
-    href: "/services/e-commerce",
+    href: "/realisations?category=E-commerce#gallery",
   },
   {
     icon: <AppWindow className="h-10 w-10 text-amber-600 mb-4" />,
     title: "Applications Web Intuitives",
     description: "Digitalisez vos processus avec des outils sur mesure.",
-    href: "/services/applications-web",
+    href: "/realisations?category=Application+Web#gallery",
   },
 ]
 

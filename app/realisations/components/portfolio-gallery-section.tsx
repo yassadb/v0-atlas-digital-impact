@@ -6,6 +6,8 @@ import Link from "next/link"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tag } from "lucide-react" // Pour les tags de service
+import { useSearchParams } from "next/navigation"
+import { useEffect } from "react"
 
 // Types pour les projets et les filtres
 type ServiceCategory = "Site Vitrine" | "E-commerce" | "Application Web" | "Branding"
@@ -75,7 +77,34 @@ const initialProjects: Project[] = [
 const serviceCategories: ServiceCategory[] = ["Site Vitrine", "E-commerce", "Application Web", "Branding"]
 
 export default function PortfolioGallerySection() {
+  const searchParams = useSearchParams()
   const [activeFilter, setActiveFilter] = useState<ServiceCategory | "Tous">("Tous")
+
+  useEffect(() => {
+    const categoryParam = searchParams.get("category")
+    if (categoryParam) {
+      // Convertir les paramètres URL en format de catégorie
+      const categoryMap: { [key: string]: ServiceCategory } = {
+        "Site Vitrine": "Site Vitrine",
+        "E-commerce": "E-commerce",
+        "Application Web": "Application Web",
+        Branding: "Branding",
+      }
+
+      // categoryParam sera déjà décodé (ex: "Site Vitrine" au lieu de "Site+Vitrine")
+      const mappedCategory = categoryMap[categoryParam as keyof typeof categoryMap]
+
+      if (mappedCategory && serviceCategories.includes(mappedCategory)) {
+        setActiveFilter(mappedCategory)
+      } else if (serviceCategories.includes(categoryParam as ServiceCategory)) {
+        // Fallback si le paramètre est déjà une catégorie valide sans mapping nécessaire
+        setActiveFilter(categoryParam as ServiceCategory)
+      } else {
+        // Si le paramètre n'est pas reconnu, on peut choisir de revenir à "Tous" ou de ne rien faire
+        // setActiveFilter("Tous");
+      }
+    }
+  }, [searchParams])
 
   const filteredProjects =
     activeFilter === "Tous" ? initialProjects : initialProjects.filter((project) => project.category === activeFilter)

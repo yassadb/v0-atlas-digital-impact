@@ -20,7 +20,7 @@ const availableServices = [
     icon: <ShoppingCart className="h-10 w-10 text-amber-600 mb-4" />, // Icône activée
     title: "E-commerce Performant", // Titre mis à jour
     description: "Lancez votre boutique en ligne optimisée pour le marché marocain et maximisez vos ventes.",
-    href: "/realisations?category=E-commerce", // Lien mis à jour
+    href: "/realisations?category=E-commerce#gallery", // Lien mis à jour
     ctaText: "Voir nos réalisations E-commerce", // CTA mis à jour
     disabled: false, // Service activé
   },
@@ -28,7 +28,7 @@ const availableServices = [
     icon: <AppWindow className="h-10 w-10 text-amber-600 mb-4" />, // Icône activée
     title: "Applications Web Intuitives", // Titre mis à jour
     description: "Digitalisez vos processus et offrez des outils sur mesure à vos clients ou à vos équipes.",
-    href: "/realisations?category=Application+Web", // Lien mis à jour
+    href: "/realisations?category=Application+Web#gallery", // Lien mis à jour
     ctaText: "Découvrir nos applications web", // CTA mis à jour
     disabled: false, // Service activé
   },
