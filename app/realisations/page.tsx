@@ -3,16 +3,16 @@
 import Header from "../../header" // Ajuster le chemin si nécessaire
 import Footer from "../../footer" // Ajuster le chemin si nécessaire
 import PortfolioHeroSection from "./components/portfolio-hero-section"
-import PortfolioGallerySection from "./components/portfolio-gallery-section"
-import PortfolioCtaSection from "./components/portfolio-cta-section" // <--- AJOUTER ICI
+import PortfolioGalleryWrapper from "./components/portfolio-gallery-wrapper"
+import PortfolioCtaSection from "./components/portfolio-cta-section"
 
 export default function PortfolioPage() {
   return (
     <div>
       <Header />
       <PortfolioHeroSection />
-      <PortfolioGallerySection />
-      <PortfolioCtaSection /> {/* <--- AJOUTER ICI */}
+      <PortfolioGalleryWrapper />
+      <PortfolioCtaSection />
       <Footer />
     </div>
   )
