@@ -114,7 +114,7 @@ export default function PortfolioGallerySection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-8">
           <p className="text-lg text-gray-700">
-            Notre portfolio est en cours d'enrichissement. Voici quelques concepts et réalisations illustrant notre
+            Voici quelques concepts et réalisations illustrant notre
             expertise en design et développement :
           </p>
         </div>
